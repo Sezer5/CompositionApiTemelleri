@@ -11,13 +11,16 @@ import {ref} from 'vue'
 export default {
   name: 'App',
   setup(){
-    let adSoyad='Sezer Ünalmış';
+    const adSoyad=ref('Sezer Ünalmış');
     let yas='35';
+    const refyas=ref(35);
     const myRef=ref(null);
     const handleClick = ()=>{
         console.log(myRef,myRef.value);
-        myRef.value.classList.add('can');
-        myRef.value.textContent='Sezer';
+        // myRef.value.classList.add('can');
+        // myRef.value.textContent='Sezer';
+        adSoyad.value="Deneme";
+        console.log(refyas);
 
     }
     return {
