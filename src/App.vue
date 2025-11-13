@@ -1,26 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div>
+        <h2>Yaş : {{ yas }}</h2>
+        <h2>Ad Soyad : {{ adSoyad }}</h2>
+        <button @click="handleClick">Tıkla</button>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  setup(){
+    let adSoyad='Sezer Ünalmış';
+    let yas='35';
+    const handleClick = ()=>{
+        console.log('Tıklandı');
+    }
+    return {
+        adSoyad,yas,handleClick
+    }
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+
